@@ -34,7 +34,7 @@ a {
   background-image: url(/assets/images/background.jpg);
   background-position: center;
   background-size: cover;
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,14 +64,14 @@ a {
 /* Text Section */
 
 .text-section {
-  flex: 2;
+  flex: 3;
   background-color: #f9fafb;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.text-section p {
+.text-section p:not(.error-message) {
   margin-bottom: 0px;
   margin-left: 48px;
   font-size: 1.6rem;
@@ -112,4 +112,47 @@ p.log-in {
   font-weight: 600;
   font-size: 1.1rem;
   margin-top: 32px;
+}
+
+.input-section h3 {
+  font-size: 1.6rem;
+}
+
+.form-inputs label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2px;
+}
+
+.form-inputs input {
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  width: 18rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 72px;
+  margin-bottom: 1rem;
+  justify-content: start;
+}
+
+.error {
+  border: 1px solid #C21807;
+}
+
+.error-message {
+  margin-top: 0;
+  font-size: 0.7rem;
+  color: red;
 }
